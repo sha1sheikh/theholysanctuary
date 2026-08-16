@@ -1,5 +1,19 @@
 # assets
 
+## compound/
+
+Stills from the film, used in the Behind the Scenes gallery and as full-width
+bands elsewhere. They are scope-format frames (roughly 2.4:1), resized to
+1800px wide and saved as JPEG at quality 0.82 — around 150KB each instead of
+the 5–7MB PNG originals, which are kept in this folder's parent and in git
+history.
+
+To add another still: drop the resized file in `compound/`, then copy one of
+the tiles in the `.grid-film` block in `index.html` and point it at the new
+file. Keep alt text descriptive of what is actually in the frame.
+
+## Logos
+
 Logo files used by `index.html`. Each one is optional: if a file is missing the
 image removes itself and the page falls back to the organisation's name in text,
 with no broken-image icon.

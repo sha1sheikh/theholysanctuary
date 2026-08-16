@@ -243,6 +243,19 @@ section.band{padding:clamp(58px,8vw,104px) 0;position:relative}
   font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;padding:16px;
 }
 .plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* A plate holding a real image swaps the dashed placeholder edge for a solid one. */
+.plate.filled{border-style:solid;background:none}
+/* The stills are scope-format frames from the film, so these tiles match their
+   2.4:1 shape instead of cropping a third off each side to fit the 3:2 plate. */
+.grid-film{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.grid-film .plate{aspect-ratio:12/5}
+/* Full-width still, used as a visual breath between passages of text. */
+.film-still{margin:0}
+.film-still img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.film-still figcaption{
+  font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.24em;
+  font-size:.72rem;color:var(--stone);margin-top:14px;text-align:center;
+}
 
 /* ---------- person page ---------- */
 .person{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:clamp(26px,4.5vw,60px);align-items:start}
@@ -510,6 +523,15 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
     </div>
   </section>
 
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <figure class="film-still">
+        <img src="assets/compound/old-city-sunset.jpg" alt="The sun setting over the Old City of Jerusalem, the Dome of the Rock catching the last light" loading="lazy">
+        <figcaption>Sunset over Al Quds</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="band band--alt" style="padding-top:0">
     <div class="wrap narrow">
       <div class="wajida">
@@ -598,24 +620,29 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
     <div class="wrap">
       <p class="eyebrow">Behind the scenes</p>
       <h2 class="sec-title">Filming inside<br>the compound</h2>
+      <figure class="film-still" style="margin:34px 0 48px">
+        <img src="assets/compound/compound-aerial-dusk.jpg" alt="The whole Al Aqsa compound at dusk, held within the walls of the Old City of Jerusalem" loading="lazy">
+        <figcaption>The compound at dusk, within the walls of the Old City</figcaption>
+      </figure>
       <div class="two-col" style="margin-bottom:48px">
         <div class="col">
           <p class="lede" style="margin-top:0">Filming began before the events of 7 October and continued throughout the devastation that followed, capturing history as it unfolded.</p>
         </div>
         <div class="col">
           <p>Access inside the blessed compound was granted over repeated visits, with a small crew working around prayer times and restrictions on entry. The footage that came back has never been seen before.</p>
-          <p class="muted" style="margin-bottom:0">Production stills, location notes and clips from the shoot will be added here.</p>
+          <p class="muted" style="margin-bottom:0">A selection of stills from the compound is below. Location notes and clips from the shoot will follow.</p>
         </div>
       </div>
 
-      <!-- Replace each .plate with <div class="plate"><img src="your-image.jpg" alt="..."></div> -->
-      <div class="grid-3">
-        <div class="plate">Production still</div>
-        <div class="plate">Production still</div>
-        <div class="plate">Production still</div>
-        <div class="plate">On location</div>
-        <div class="plate">On location</div>
-        <div class="plate">The crew</div>
+      <!-- Stills from the film. To add more, drop the file in assets/compound/ and
+           copy a tile below; empty .plate tiles still work as placeholders. -->
+      <div class="grid-film">
+        <div class="plate filled"><img src="assets/compound/compound-overview.jpg" alt="The Al Aqsa compound seen from above, the golden Dome of the Rock and the lead dome of the Qibli Mosque standing over the plaza" loading="lazy"></div>
+        <div class="plate filled"><img src="assets/compound/dome-of-the-rock-plaza.jpg" alt="The Dome of the Rock across the open plaza, birds circling above the golden dome" loading="lazy"></div>
+        <div class="plate filled"><img src="assets/compound/qibli-mosque-olive-tree.jpg" alt="The Qibli Mosque across the plaza, an ancient olive tree in the foreground" loading="lazy"></div>
+        <div class="plate filled"><img src="assets/compound/qibli-mosque-facade.jpg" alt="The arched stone facade of the Qibli Mosque, worshippers resting in its shade" loading="lazy"></div>
+        <div class="plate filled"><img src="assets/compound/arches-cypress.jpg" alt="Stone arches within the compound, cypress trees rising behind them" loading="lazy"></div>
+        <div class="plate filled"><img src="assets/compound/plaza-worshippers.jpg" alt="Two women walking across the worn stone of the plaza in the early light, a cat crossing ahead of them" loading="lazy"></div>
       </div>
 
       <p class="eyebrow" style="margin-top:56px">The crew</p>
