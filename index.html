@@ -102,7 +102,10 @@ p{margin:0 0 1.25em}
   display:flex;align-items:center;gap:22px;justify-content:space-between;
 }
 .brand{display:flex;align-items:center;gap:14px;line-height:1;color:var(--cream)}
-.brand-logo{flex:none;height:42px;width:auto;max-width:130px;object-fit:contain}
+/* The mark is a stacked lockup (calligraphy over the wordmark), so it needs more
+   height than a horizontal logo before the wordmark reads. The max-width is a
+   guard in case the file is ever swapped for a wide version. */
+.brand-logo{flex:none;height:50px;width:auto;max-width:130px;object-fit:contain}
 .brand .b1{font-size:.56rem;letter-spacing:.5em;color:var(--stone);display:block;margin-bottom:5px}
 .brand .b2{font-family:'Montserrat';font-weight:900;font-size:1.02rem;letter-spacing:.02em;text-transform:uppercase;display:block;white-space:nowrap}
 .brand:hover .b2{color:#fff}
@@ -344,7 +347,7 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 @media (max-width:700px){
   /* Phone masthead: brand and logo have to share the row with the menu button. */
   .brand{gap:10px}
-  .brand-logo{height:28px;max-width:72px}
+  .brand-logo{height:38px;max-width:72px}
   .brand .b1{font-size:.5rem;letter-spacing:.3em;margin-bottom:4px}
   .brand .b2{font-size:.82rem}
 }
