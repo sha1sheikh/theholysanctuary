@@ -303,8 +303,12 @@ textarea{min-height:150px;resize:vertical}
 .creditblock .sep{color:var(--stone);padding:0 .45em;font-weight:300}
 
 footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding:clamp(46px,6vw,74px) 0 30px}
-.foot-marks{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:center;justify-content:center;margin-bottom:34px}
-.foot-marks span{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.3em;font-size:.76rem;color:var(--stone)}
+.foot-marks{display:flex;flex-wrap:wrap;gap:26px 44px;align-items:flex-end;justify-content:center;margin-bottom:34px}
+.foot-mark{display:flex;flex-direction:column;align-items:center;gap:12px}
+.foot-mark-name{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.3em;font-size:.76rem;color:var(--stone)}
+/* Each production logo drops itself if its file is missing, leaving the name. */
+.foot-logo{height:56px;width:auto;max-width:160px;object-fit:contain}
+@media (max-width:560px){.foot-logo{height:44px;max-width:120px}}
 .foot-base{
   margin-top:34px;padding-top:22px;border-top:1px solid rgba(201,154,95,.18);
   display:flex;flex-wrap:wrap;gap:14px 26px;justify-content:space-between;align-items:center;
@@ -730,7 +734,18 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 <footer class="site">
   <div class="wrap">
     <div class="foot-marks">
-      <span>Al Hikma</span><span>Silver Halo</span><span>Inspire Films</span>
+      <span class="foot-mark">
+        <img class="foot-logo" src="assets/alhikma-logo.png" alt="" onerror="this.remove()">
+        <span class="foot-mark-name">Al Hikma</span>
+      </span>
+      <span class="foot-mark">
+        <img class="foot-logo" src="assets/silver-halo-logo.png" alt="" onerror="this.remove()">
+        <span class="foot-mark-name">Silver Halo</span>
+      </span>
+      <span class="foot-mark">
+        <img class="foot-logo" src="assets/inspire-films-logo.png" alt="" onerror="this.remove()">
+        <span class="foot-mark-name">Inspire Films</span>
+      </span>
     </div>
     <div class="creditblock">
       <p><span class="nm">AL HIKMA</span> <span class="role">PRESENTS IN ASSOCIATION WITH</span> <span class="nm">SILVER HALO</span> <span class="role">AND</span> <span class="nm">INSPIRE FILMS</span> <span class="role">A</span> <span class="nm">KHALID MAHMOOD</span> <span class="role">FILM</span><span class="sep">&middot;</span><span class="role">FILM EXECUTIVE PRODUCER</span> <span class="nm">MAROOF</span><span class="sep">&middot;</span><span class="role">DIRECTED, FILMED AND EDITED BY</span> <span class="nm">KHALID MAHMOOD</span></p>
