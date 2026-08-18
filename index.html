@@ -252,6 +252,9 @@ section.band{padding:clamp(58px,8vw,104px) 0;position:relative}
 /* Full-width still, used as a visual breath between passages of text. */
 .film-still{margin:0}
 .film-still img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+/* 16:9 frame for the embedded trailer. */
+.video{position:relative;aspect-ratio:16/9;border:1px solid var(--line);background:#000;margin-top:26px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .film-still figcaption{
   font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.24em;
   font-size:.72rem;color:var(--stone);margin-top:14px;text-align:center;
@@ -445,6 +448,21 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
   <section class="band">
     <div class="wrap">
       <p class="pull">Some places are more than landmarks. They are the heartbeat of a people, the soul of a faith, and the witness to <em>centuries of history</em>.</p>
+    </div>
+  </section>
+
+  <section class="band" id="trailer" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Watch</p>
+      <h2 class="sec-title">The trailer</h2>
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/xIEQPQp-eBA"
+                title="The Holy Sanctuary, official trailer"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
     </div>
   </section>
 
