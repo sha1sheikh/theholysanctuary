@@ -180,6 +180,10 @@ nav.tabs a[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold
   display:flex;flex-wrap:wrap;align-items:center;gap:16px 40px;justify-content:center;
 }
 .fact{display:flex;flex-direction:column;gap:3px;text-align:center}
+/* Two calls to action share this row with the three premiere facts, so the
+   buttons run tighter here than they do in the body of the site. */
+.hero-strip .btn{font-size:.82rem;letter-spacing:.15em;padding:11px 20px}
+.hero-strip .btn-row{justify-content:center}
 .fact .k{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.24em;font-size:.7rem;color:var(--stone)}
 .fact .v{font-family:'Montserrat';font-weight:700;font-size:.95rem;letter-spacing:.02em;color:#fff;text-transform:uppercase}
 
@@ -252,6 +256,9 @@ section.band{padding:clamp(58px,8vw,104px) 0;position:relative}
 /* Full-width still, used as a visual breath between passages of text. */
 .film-still{margin:0}
 .film-still img{width:100%;height:auto;display:block;border:1px solid var(--line)}
+/* Anchored sections clear the sticky masthead instead of hiding under it. */
+.view section[id]{scroll-margin-top:96px}
+@media (max-width:700px){.view section[id]{scroll-margin-top:80px}}
 /* 16:9 frame for the embedded trailer. */
 .video{position:relative;aspect-ratio:16/9;border:1px solid var(--line);background:#000;margin-top:26px}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
@@ -441,7 +448,10 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
       <div class="fact"><span class="k">Premiere</span><span class="v">Sat 12 September 2026</span></div>
       <div class="fact"><span class="k">Arrival</span><span class="v">4:30pm</span></div>
       <div class="fact"><span class="k">Venue</span><span class="v">IMAX, Millennium Point, Birmingham</span></div>
-      <div class="fact"><a class="btn" href="#showings">Screening details</a></div>
+      <div class="btn-row">
+        <a class="btn ghost" href="#trailer">Watch the trailer</a>
+        <a class="btn" href="#showings">Screening details</a>
+      </div>
     </div>
   </div>
 
@@ -828,12 +838,21 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
   function fromHash(){
     return (location.hash || '#home').replace('#','').split('?')[0];
   }
-  window.addEventListener('hashchange', function(){ show(fromHash(), true); });
+  // A hash either names a view (#showings) or a section inside one (#trailer).
+  // For a section, switch to its view and bring the section into sight rather
+  // than falling back to home and jumping to the top of the page.
+  function route(name, push){
+    var el   = ids.indexOf(name) === -1 ? document.getElementById(name) : null;
+    var host = el && el.closest ? el.closest('.view') : null;
+    show(host ? host.id.replace('view-','') : name, push && !host);
+    if (host) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  window.addEventListener('hashchange', function(){ route(fromHash(), true); });
   btn.addEventListener('click', function(){
     var open = nav.classList.toggle('is-open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  show(fromHash(), false);
+  route(fromHash(), false);
 
   document.getElementById('yr').textContent = new Date().getFullYear();
 
