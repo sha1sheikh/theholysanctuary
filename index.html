@@ -257,13 +257,7 @@ section.band{padding:clamp(58px,8vw,104px) 0;position:relative}
   font-size:.72rem;color:var(--stone);margin-top:14px;text-align:center;
 }
 
-/* ---------- person page ---------- */
-.person{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:clamp(26px,4.5vw,60px);align-items:start}
-.portrait{
-  aspect-ratio:4/5;border:1px solid var(--line);background:rgba(42,110,158,.09);
-  display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;
-  color:var(--stone);font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;
-}
+/* ---------- director & producer pages ---------- */
 .credit-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
 .credit-chips li{
   font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;
@@ -353,7 +347,7 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .two-col{grid-template-columns:1fr}
-  .screening,.person{grid-template-columns:1fr}
+  .screening{grid-template-columns:1fr}
   .screening .poster{max-width:320px}
 }
 /* The eight nav labels plus the brand need ~1150px on one line; below that the
@@ -666,23 +660,17 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 <!-- ==================== DIRECTOR ==================== -->
 <div class="view" id="view-director" role="region" aria-label="Director">
   <section class="band">
-    <div class="wrap">
+    <div class="wrap narrow">
       <p class="eyebrow">Director</p>
       <h2 class="sec-title">Khalid Mahmood</h2>
-      <div class="person">
-        <!-- Replace with <img src="khalid.jpg" alt="Khalid Mahmood"> -->
-        <div class="portrait">Portrait to be added</div>
-        <div>
-          <p class="lede" style="margin-top:0">Khalid Mahmood directed, filmed and edited The Holy Sanctuary, carrying the project from first conversation to final cut.</p>
-          <p class="muted">Biography to be added. A short paragraph on Khalid's background, previous work with Silver Halo Photography &amp; Films, and what drew him to Al Aqsa will sit here.</p>
-          <ul class="credit-chips">
-            <li>Director</li>
-            <li>Cinematographer</li>
-            <li>Editor</li>
-            <li>Silver Halo Photography &amp; Films</li>
-          </ul>
-        </div>
-      </div>
+      <p class="lede">Khalid Mahmood is a Birmingham based filmmaker and cinematographer with a deep passion for visual storytelling. Drawn to stories rooted in history, faith, people and place, his work is driven by a desire to create films that are both visually compelling and emotionally meaningful.</p>
+      <p>His latest documentary, The Holy Sanctuary, is the culmination of a four-year journey exploring the history, significance and enduring importance of Al-Aqsa. Filmed across multiple locations and shaped by two visits to Jerusalem, the project reflects Khalid’s commitment to independent filmmaking and his belief in the power of film to inform, inspire and leave a lasting impression.</p>
+      <ul class="credit-chips">
+        <li>Director</li>
+        <li>Cinematographer</li>
+        <li>Editor</li>
+        <li>Silver Halo Photography &amp; Films</li>
+      </ul>
     </div>
   </section>
 </div>
@@ -690,25 +678,22 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 <!-- ==================== PRODUCER ==================== -->
 <div class="view" id="view-producer" role="region" aria-label="Producer">
   <section class="band">
-    <div class="wrap">
+    <div class="wrap narrow">
       <p class="eyebrow">Producer</p>
       <h2 class="sec-title">Maroof</h2>
-      <div class="person">
-        <!-- Replace with <img src="maroof.jpg" alt="Maroof"> -->
-        <div class="portrait">Portrait to be added</div>
-        <div>
-          <p class="lede" style="margin-top:0">Maroof served as film executive producer on The Holy Sanctuary, working alongside Al Hikma, Silver Halo and Inspire Films.</p>
-          <p class="muted">Biography to be added.</p>
-          <ul class="credit-chips">
-            <li>Film executive producer</li>
-          </ul>
+      <p class="lede">For nearly three decades, Maroof and his team have worked at the intersection of community, charity and da’wah, bringing ideas to life through projects designed to inspire and serve.</p>
+      <p>Blessed with frequent journeys to the sacred lands of Makkah, Madinah and Al Quds, his connection to these places runs deep. Shaped by the teachers and mentors who guided his journey, he has learned to translate Islamic teachings into wisdom, clarity and a message that resonates with the average person — reaching hearts, minds and communities.</p>
+      <p>The Holy Sanctuary was born from a deeply personal vision. Maroof’s mother and aunt, Wajida Syeda and Dr Wagiha Syeda, initiated and financed Al Hikma’s first cinematic documentary — driven by a desire to bring the story and significance of Al Aqsa to a wider audience.</p>
+      <p>Maroof then approached Khalid with the vision for the film. Together with his team, he brought the production to life — securing internationally acclaimed voices, shaping the content, coordinating locations and providing the direction and framework that allowed Khalid to bring his cinematic vision to the screen.</p>
+      <p><strong>A vision born from faith. A story shaped by purpose. A film brought to life by a team determined to make it matter.</strong></p>
+      <ul class="credit-chips">
+        <li>Film executive producer</li>
+      </ul>
 
-          <p class="eyebrow" style="margin-top:44px">Executive producers</p>
-          <div class="voices">
-            <div class="voice"><div class="nm">Maroof Sethi</div><div class="rl">Executive producer</div></div>
-            <div class="voice"><div class="nm">Thabassam Raza</div><div class="rl">Executive producer</div></div>
-          </div>
-        </div>
+      <p class="eyebrow" style="margin-top:44px">Executive producers</p>
+      <div class="voices">
+        <div class="voice"><div class="nm">Maroof Sethi</div><div class="rl">Executive producer</div></div>
+        <div class="voice"><div class="nm">Thabassam Raza</div><div class="rl">Executive producer</div></div>
       </div>
     </div>
   </section>
