@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Holy Sanctuary — Beyond the Dome of the Rock</title>
-<meta name="description" content="An epic cinematic documentary filmed inside the blessed Al Aqsa compound. Screening at Square One, The Hub, Coventry, Saturday 19 September 2026.">
+<meta name="description" content="An epic cinematic documentary filmed inside the blessed Al Aqsa compound. Premiering at the IMAX, Millennium Point, Birmingham, Saturday 12 September 2026. Second screening now open.">
 <meta property="og:title" content="The Holy Sanctuary — Beyond the Dome of the Rock">
-<meta property="og:description" content="An epic cinematic documentary filmed inside the blessed Al Aqsa compound. Screening at Square One, The Hub, Coventry, 19 September 2026.">
+<meta property="og:description" content="An epic cinematic documentary filmed inside the blessed Al Aqsa compound. Premiering at the IMAX, Millennium Point, Birmingham, 12 September 2026. Second screening now open.">
 <meta property="og:type" content="video.movie">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -386,7 +386,7 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
   font-size:.72rem;color:var(--stone);margin-bottom:6px;
 }
 .slide-meta dd{margin:0;font-family:'Montserrat';font-weight:700;font-size:.95rem;color:#fff}
-.slide-meta dd span{
+.slide-meta dd span:not(.tag-sold){
   display:block;font-family:'Lora',Georgia,serif;font-weight:400;
   font-size:.9rem;color:var(--haze);margin-top:5px;
 }
@@ -400,11 +400,6 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
   background:rgba(159,187,208,.08);padding:.42em .7em;white-space:nowrap;
 }
 .screening-place .tag-sold{font-size:.86rem}
-.sold-note{color:var(--haze);font-size:.95rem;margin:0 0 22px}
-.btn-disabled{
-  background:none;border-color:rgba(159,187,208,.4);color:var(--haze);
-  cursor:default;pointer-events:none;
-}
 .carousel-dots{display:flex;gap:10px;justify-content:center;margin-top:24px}
 .carousel-dots button{
   width:36px;height:4px;border:0;padding:0;cursor:pointer;
@@ -521,9 +516,9 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
 
   <div class="hero-strip">
     <div class="hero-strip-in">
-      <div class="fact"><span class="k">Next screening</span><span class="v">Sat 19 September 2026</span></div>
-      <div class="fact"><span class="k">Arrival</span><span class="v">7:00pm</span></div>
-      <div class="fact"><span class="k">Venue</span><span class="v">Square One, The Hub, Coventry</span></div>
+      <div class="fact"><span class="k">Premiere</span><span class="v">Sat 12 September 2026</span></div>
+      <div class="fact"><span class="k">2nd screening</span><span class="v">Arrival 8:30pm</span></div>
+      <div class="fact"><span class="k">Venue</span><span class="v">IMAX, Millennium Point, Birmingham</span></div>
       <div class="btn-row">
         <a class="btn ghost" href="#trailer">Watch the trailer</a>
         <a class="btn" href="#showings">Screening details</a>
@@ -599,7 +594,20 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
           <div class="carousel-viewport" tabindex="0" role="group"
                aria-roledescription="carousel" aria-label="Screenings, 2 dates">
             <ul class="carousel-track">
-              <li class="slide" role="group" aria-roledescription="slide" aria-label="1 of 2, Coventry, tickets available">
+              <li class="slide" role="group" aria-roledescription="slide" aria-label="1 of 2, Birmingham premiere">
+                <p class="slide-city">Birmingham</p>
+                <p class="slide-date">Premiere &middot; Saturday 12 September 2026</p>
+                <dl class="slide-meta">
+                  <div><dt>First screening</dt><dd>4:30pm <span class="tag-sold">Sold out</span></dd></div>
+                  <div><dt>Second screening</dt><dd>8:30pm<span>Seats available</span></dd></div>
+                  <div><dt>Venue</dt><dd>IMAX Cinema, Millennium Point<span>Curzon Street, Birmingham, B4 7XG</span></dd></div>
+                </dl>
+                <div class="btn-row">
+                  <a class="btn" href="https://muslimevent.co.uk/event/the-holy-sanctuary-2nd-screening/" target="_blank" rel="noopener">Book the 8:30pm screening</a>
+                  <a class="btn ghost" href="#showings">Full details</a>
+                </div>
+              </li>
+              <li class="slide" role="group" aria-roledescription="slide" aria-label="2 of 2, Coventry">
                 <p class="slide-city">Coventry</p>
                 <p class="slide-date">Saturday 19 September 2026</p>
                 <dl class="slide-meta">
@@ -611,26 +619,13 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
                   <a class="btn ghost" href="#showings">Full details</a>
                 </div>
               </li>
-              <li class="slide" role="group" aria-roledescription="slide" aria-label="2 of 2, Birmingham, sold out">
-                <p class="slide-city">Birmingham <span class="tag-sold">Sold out</span></p>
-                <p class="slide-date">Premiere &middot; Saturday 12 September 2026</p>
-                <dl class="slide-meta">
-                  <div><dt>Arrival</dt><dd>4:30pm<span>Salah space is available at the venue.</span></dd></div>
-                  <div><dt>Venue</dt><dd>IMAX Cinema, Millennium Point<span>Curzon Street, Birmingham, B4 7XG</span></dd></div>
-                </dl>
-                <p class="sold-note">This screening is fully booked. Coventry on 19 September still has seats.</p>
-                <div class="btn-row">
-                  <a class="btn" href="https://muslimevent.co.uk/event/the-holy-sanctuary-coventry/" target="_blank" rel="noopener">Book Coventry instead</a>
-                  <a class="btn ghost" href="#showings">Full details</a>
-                </div>
-              </li>
             </ul>
           </div>
           <button class="carousel-nav prev" type="button" aria-label="Previous screening">&lsaquo;</button>
           <button class="carousel-nav next" type="button" aria-label="Next screening">&rsaquo;</button>
           <div class="carousel-dots">
-            <button type="button" aria-label="Show Coventry" aria-current="true"></button>
-            <button type="button" aria-label="Show Birmingham" aria-current="false"></button>
+            <button type="button" aria-label="Show Birmingham" aria-current="true"></button>
+            <button type="button" aria-label="Show Coventry" aria-current="false"></button>
           </div>
         </div>
       </div>
@@ -716,12 +711,33 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
   <section class="band">
     <div class="wrap">
       <p class="eyebrow">Showings</p>
-      <h2 class="sec-title">Coventry</h2>
-      <p class="screening-place">Saturday 19 September &middot; Tickets available</p>
-      
+      <h2 class="sec-title">The premiere</h2>
+      <p class="screening-place">Birmingham &middot; Two screenings</p>
+
+      <div class="screening">
+        <img class="poster" src="assets/poster.jpg" alt="The Holy Sanctuary poster">
+        <div>
+          <p class="lede" style="margin-top:0">Join the Producer, Director and the team behind The Holy Sanctuary for the premiere at the IMAX Cinema, Millennium Point, Birmingham. The first screening is sold out; a second screening has been added the same evening.</p>
+          <ul class="detail-list">
+            <li><span class="k">Date</span><span class="v">Saturday 12 September 2026</span></li>
+            <li><span class="k">First screening</span><span class="v">Arrival 4:30pm <span class="tag-sold">Sold out</span></span></li>
+            <li><span class="k">Second screening</span><span class="v">Arrival 8:30pm<small>Seats available. Salah space is available at the venue.</small></span></li>
+            <li><span class="k">Venue</span><span class="v">IMAX Cinema, Millennium Point<small>Curzon Street, Birmingham, B4 7XG</small></span></li>
+            <li><span class="k">Enquiries</span><span class="v"><a href="tel:+447877193234">07877 193 234</a></span></li>
+          </ul>
+          <div class="btn-row" style="margin-top:28px">
+            <a class="btn" href="https://muslimevent.co.uk/event/the-holy-sanctuary-2nd-screening/" target="_blank" rel="noopener">Book the 8:30pm screening</a>
+            <a class="btn ghost" href="https://maps.google.com/?q=Millennium+Point,+Curzon+Street,+Birmingham+B4+7XG" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="sec-title screening-next">Coventry</h2>
+      <p class="screening-place">One week later</p>
+
       <div class="screening screening--text">
         <div>
-          <p class="lede" style="margin-top:0">The Holy Sanctuary screens at Square One in The Hub, Coventry. Seats are available now.</p>
+          <p class="lede" style="margin-top:0">The Holy Sanctuary comes to Coventry the following Saturday, at Square One in The Hub. Seats are available now.</p>
           <ul class="detail-list">
             <li><span class="k">Date</span><span class="v">Saturday 19 September 2026</span></li>
             <li><span class="k">Arrival</span><span class="v">7:00pm</span></li>
@@ -731,26 +747,6 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
           <div class="btn-row" style="margin-top:28px">
             <a class="btn" href="https://muslimevent.co.uk/event/the-holy-sanctuary-coventry/" target="_blank" rel="noopener">Book your seat</a>
             <a class="btn ghost" href="https://maps.app.goo.gl/nC3KrBkKT5ttmkZF6" target="_blank" rel="noopener">Get directions</a>
-          </div>
-        </div>
-      </div>
-
-      <h2 class="sec-title screening-next">The premiere</h2>
-      <p class="screening-place">Birmingham <span class="tag-sold">Sold out</span></p>
-
-      <div class="screening">
-        <img class="poster" src="assets/poster.jpg" alt="The Holy Sanctuary poster">
-        <div>
-          <p class="lede" style="margin-top:0">The premiere with the Producer, Director and the team behind The Holy Sanctuary, at the IMAX Cinema, Millennium Point, Birmingham. This screening is now fully booked.</p>
-          <ul class="detail-list">
-            <li><span class="k">Date</span><span class="v">Saturday 12 September 2026</span></li>
-            <li><span class="k">Arrival</span><span class="v">4:30pm<small>Salah space is available at the venue.</small></span></li>
-            <li><span class="k">Venue</span><span class="v">IMAX Cinema, Millennium Point<small>Curzon Street, Birmingham, B4 7XG</small></span></li>
-            <li><span class="k">Enquiries</span><span class="v"><a href="tel:+447877193234">07877 193 234</a></span></li>
-          </ul>
-          <div class="btn-row" style="margin-top:28px">
-            <span class="btn btn-disabled" aria-disabled="true">Sold out</span>
-            <a class="btn ghost" href="https://maps.google.com/?q=Millennium+Point,+Curzon+Street,+Birmingham+B4+7XG" target="_blank" rel="noopener">Get directions</a>
           </div>
         </div>
       </div>
@@ -869,7 +865,7 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
           <ul class="detail-list">
             <li><span class="k">Phone</span><span class="v"><a href="tel:+447877193234">07877 193 234</a></span></li>
             <li><span class="k">Email</span><span class="v"><a href="mailto:info@alhikma.co.uk">info@alhikma.co.uk</a></span></li>
-            <li><span class="k">Next screening</span><span class="v">Square One, The Hub<small>4 Jordan Well, Coventry, CV1 5QT</small></span></li>
+            <li><span class="k">Premiere</span><span class="v">IMAX, Millennium Point<small>Curzon Street, Birmingham, B4 7XG</small></span></li>
           </ul>
         </div>
         <div class="col">
@@ -935,7 +931,7 @@ footer.site{background:#03101d;border-top:1px solid rgba(201,154,95,.22);padding
     </div>
     <div class="foot-base">
       <span>&copy; <span id="yr">2026</span> The Holy Sanctuary</span>
-      <span><a href="#showings">Next screening: 19 September 2026, Coventry</a></span>
+      <span><a href="#showings">Premiere: 12 September 2026, Birmingham</a></span>
       <span><a href="tel:+447877193234">07877 193 234</a></span>
     </div>
   </div>
